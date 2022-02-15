@@ -11,11 +11,8 @@ const CartScreen = ({navigation}) => {
   const items = useSelector(state => state.cart.items);
   const total = useSelector(state => state.cart.total);
 
-  console.warn(total);
-
   const handleConfirm = () => {
     dispatch(confirmCart(items, total));
-
     navigation.navigate('Orders');
   };
   const handleDelete = id => {
